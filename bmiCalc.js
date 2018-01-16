@@ -4,6 +4,8 @@
 // Metric formula is
   //BMI = (Weight in Kilograms / (Height in Meters x Height in Meters))
 
+let calcButton = document.getElementById('calculate');
+
 const calculateBMI = function() {
   //Get Weight and store as variable
   let weight = prompt("what is your weight in lbs?");
@@ -30,6 +32,15 @@ const calculateBMI = function() {
   bmiEnglish(weight, height);
 };
 
+
+let runCalc = function (){
+  calculateBMI();
+};
+
+
+
+calcButton.addEventListener('click', runCalc);
+calcButton.addEventListener('touchend', runCalc);
 //Determine BMI Classification
 //if bmi <= 18.5 return "Underweight"
 
